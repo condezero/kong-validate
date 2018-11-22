@@ -32,11 +32,11 @@ local function retrieve_token(request, conf)
     end 
 end
 function JWTValidateHandler:new()
-    JwtClaimsValidateHandler.super.new(self, "jwt-claims-headers")
+    JWTValidateHandler.super.new(self, "jwt-claims-headers")
 end
 
 
-function JwtClaimsValidateHandler:access(conf)
+function JWTValidateHandler:access(conf)
     JWTValidateHandler.super.access(self)
     local token, err = retrieve_token(ngx.req, conf)
     if err and not continue_on_error then
