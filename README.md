@@ -5,5 +5,6 @@ Install
 -------
 
 Clone the repository and then from the cloned directory, as root:
-    # luarocks make
-
+```
+# luarocks make
+```
